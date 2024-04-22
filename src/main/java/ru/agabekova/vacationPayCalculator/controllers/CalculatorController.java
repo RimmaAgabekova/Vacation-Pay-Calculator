@@ -2,7 +2,6 @@ package ru.agabekova.vacationPayCalculator.controllers;
 
 
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +14,7 @@ public class CalculatorController {
     private final CalculatorService calculatorService;
 
     @GetMapping("/calculator")
-    public String calculator(@ModelAttribute("calculator") VacationCalculator vacationCalculator,
+    public String getCalculation(@ModelAttribute("calculator") VacationCalculator vacationCalculator,
                              Model model) {
 
         model.addAttribute("calculator", calculatorService.getCalculateVacation(vacationCalculator));

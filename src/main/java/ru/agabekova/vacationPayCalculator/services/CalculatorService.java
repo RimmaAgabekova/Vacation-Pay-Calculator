@@ -1,9 +1,10 @@
 package ru.agabekova.vacationPayCalculator.services;
 
-import org.springframework.stereotype.Component;
+
+import org.springframework.stereotype.Service;
 import ru.agabekova.vacationPayCalculator.models.VacationCalculator;
 
-@Component
+@Service
 public class CalculatorService {
     public static final double AVERAGE_QUANTITY_DAYS_IN_MONTH = 29.3;
 
